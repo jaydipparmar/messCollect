@@ -6,6 +6,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 
+// Public Pages
+import Home from './pages/Home';
+
 // Auth Pages
 import Login from './pages/auth/Login';
 import Signup from './pages/auth/Signup';
@@ -41,8 +44,8 @@ function App() {
                 />
 
                 <Routes>
-                    {/* Default Redirect */}
-                    <Route path="/" element={<Navigate to="/login" replace />} />
+                    {/* Home Page */}
+                    <Route path="/" element={<Home />} />
 
                     {/* Public Auth Routes */}
                     <Route path="/login" element={<Login />} />
